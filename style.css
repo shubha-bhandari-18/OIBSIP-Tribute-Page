@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5efe6;
+    color: #29231f;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(35, 28, 22, 0.75),
+            rgba(35, 28, 22, 0.75)
+        );
+
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+    letter-spacing: 5px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 80px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: clamp(17px, 2vw, 23px);
+}
+
+
+/* IMAGE */
+
+.image-section {
+    padding: 60px 20px;
+    background: #fffaf4;
+    text-align: center;
+}
+
+figure {
+    max-width: 600px;
+    margin: auto;
+}
+
+figure img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #6b5c50;
+}
+
+
+/* BIOGRAPHY */
+
+.biography {
+    padding: 80px 20px;
+    background: #e8ddd0;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.biography p {
+    margin-bottom: 22px;
+    font-size: 17px;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+    padding: 80px 20px;
+    background: #f5efe6;
+}
+
+.timeline-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.timeline-card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border-left: 5px solid #9a6b3d;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-card span {
+    display: inline-block;
+    color: #9a6b3d;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.timeline-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+/* QUOTE */
+
+.quote-section {
+    background: #332820;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+blockquote {
+    max-width: 850px;
+    margin: auto;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(25px, 4vw, 42px);
+    line-height: 1.4;
+}
+
+.quote-section p {
+    margin-top: 25px;
+}
+
+
+/* LEGACY */
+
+.legacy {
+    padding: 80px 20px;
+    background: #fffaf4;
+}
+
+.legacy p {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-size: 17px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #1f1915;
+    color: #ddd;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: #d8a96e;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .timeline-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .timeline-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 45vh;
+    }
+
+    .biography,
+    .timeline,
+    .legacy,
+    .quote-section {
+        padding: 55px 18px;
+    }
+}
